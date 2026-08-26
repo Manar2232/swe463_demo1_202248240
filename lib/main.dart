@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 // ==================== CHECKPOINT 1 - COMMENTED ====================
 // void main() {
 //  runApp(
@@ -65,144 +66,138 @@ import 'package:flutter/material.dart';
 //  );
 // }
 // ==================== CHECKPOINT 4 - COMMENTED ====================
-// import 'package:flutter/material.dart'; 
- 
-// void main() { 
-//   runApp(const MyApp()); 
-// } 
- 
-// class MyApp extends StatelessWidget { 
-//   const MyApp({super.key}); 
-//    @override 
-//   Widget build(BuildContext context) { 
-//     return MaterialApp( 
-//       debugShowCheckedModeBanner: false, 
-//       home: Scaffold( 
-//         appBar: AppBar( 
-//           title: const Text('SWE 463 - Demo 1'), 
-//         ), 
-//         drawer: const Drawer( 
-//           child: SafeArea( 
-//             child: ListTile( 
-//               leading: Icon(Icons.home), 
-//               title: Text('Home'), 
-//             ), 
-//           ), 
-//         ), 
-//         body: const Center( 
-//           child: Text( 
-//             'Hot reload is working!', 
-//             style: TextStyle(fontSize: 24), 
-//           ), 
-//         ), 
-//       ), 
-//     ); 
-//   } 
-// } 
-// ==================== CHECKPOINT 5 - COMMENTED ====================
-// import 'package:flutter/material.dart'; 
- 
-// void main() { 
-//   runApp(const MyApp()); 
-// } 
+// import 'package:flutter/material.dart';
 
-// class MyApp extends StatelessWidget { 
-//   const MyApp({super.key}); 
- 
-//   @override 
-//   Widget build(BuildContext context) { 
-//     return MaterialApp( 
-//       debugShowCheckedModeBanner: false, 
-//       title: 'SWE 463 Demo 1', 
-//       home: const HomePage(), 
-//     ); 
-//   } 
-// } 
- 
-// class HomePage extends StatelessWidget { 
-//   const HomePage({super.key}); 
- 
-//   @override 
-//   Widget build(BuildContext context) { 
-//     return Scaffold( 
-//       appBar: AppBar( 
-//         title: const Text('Home Page'), 
-//       ), 
-//       body: const Center( 
-//         child: Text( 
-//           'This is the Home Page', 
-//           style: TextStyle(fontSize: 24), 
-//         ), 
-//       ), 
-//     ); 
-//   } 
-// } 
- 
-// class LoginPage extends StatelessWidget { 
-//   const LoginPage({super.key}); 
- 
-//   @override 
-//   Widget build(BuildContext context) { 
-//     return Scaffold( 
-//       appBar: AppBar( 
-//         title: const Text('Login Page'), 
-//       ), 
-//       body: const Center( 
-//         child: Text( 
-//           'This is the Login Page', 
-//           style: TextStyle(fontSize: 24), 
-//         ), 
-//       ), 
-//     ); 
-//   } 
-// } 
+// void main() {
+//   runApp(const MyApp());
+// }
+
+// class MyApp extends StatelessWidget {
+//   const MyApp({super.key});
+//    @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       debugShowCheckedModeBanner: false,
+//       home: Scaffold(
+//         appBar: AppBar(
+//           title: const Text('SWE 463 - Demo 1'),
+//         ),
+//         drawer: const Drawer(
+//           child: SafeArea(
+//             child: ListTile(
+//               leading: Icon(Icons.home),
+//               title: Text('Home'),
+//             ),
+//           ),
+//         ),
+//         body: const Center(
+//           child: Text(
+//             'Hot reload is working!',
+//             style: TextStyle(fontSize: 24),
+//           ),
+//         ),
+//       ),
+//     );
+//   }
+// }
+// ==================== CHECKPOINT 5 - COMMENTED ====================
+// import 'package:flutter/material.dart';
+
+// void main() {
+//   runApp(const MyApp());
+// }
+
+// class MyApp extends StatelessWidget {
+//   const MyApp({super.key});
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       debugShowCheckedModeBanner: false,
+//       title: 'SWE 463 Demo 1',
+//       home: const HomePage(),
+//     );
+//   }
+// }
+
+// class HomePage extends StatelessWidget {
+//   const HomePage({super.key});
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       appBar: AppBar(
+//         title: const Text('Home Page'),
+//       ),
+//       body: const Center(
+//         child: Text(
+//           'This is the Home Page',
+//           style: TextStyle(fontSize: 24),
+//         ),
+//       ),
+//     );
+//   }
+// }
+
+// class LoginPage extends StatelessWidget {
+//   const LoginPage({super.key});
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       appBar: AppBar(
+//         title: const Text('Login Page'),
+//       ),
+//       body: const Center(
+//         child: Text(
+//           'This is the Login Page',
+//           style: TextStyle(fontSize: 24),
+//         ),
+//       ),
+//     );
+//   }
+// }
 
 // ==================== CHECKPOINT 6 - FINAL ACTIVE CODE ====================
 
 void main() {
-runApp(
-MaterialApp(
-home: HomePage(),
-),
-);
+  runApp(MaterialApp(home: HomePage()));
 }
+
 class HomePage extends StatelessWidget {
-@override
-Widget build(BuildContext context) {
-return Scaffold(
-body: Center(
-child: ElevatedButton(
-child: Text('Go to Login'),
-onPressed: () {
-Navigator.push(
-context,
-MaterialPageRoute(
-builder: (context) => LoginPage(),
-),
-);
-},
-),
-),
-);
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: ElevatedButton(
+          child: Text('Go to Login'),
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => LoginPage()),
+            );
+          },
+        ),
+      ),
+    );
+  }
 }
-}
+
 class LoginPage extends StatelessWidget {
-@override
-Widget build(BuildContext context) {
-return Scaffold(
-body: Center(
-child: ElevatedButton(
-child: Text('Go to home'),
-onPressed: () {
-Navigator.push(
-context,
-MaterialPageRoute(
-builder: (context) => HomePage(),
-),
-);
-},
-),
-),
-);
-}
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: ElevatedButton(
+          child: Text('Go to home'),
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => HomePage()),
+            );
+          },
+        ),
+      ),
+    );
+  }
 }
